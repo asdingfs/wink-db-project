@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[imob_customer] (
+    [customer_id]               INT           IDENTITY (1, 1) NOT NULL,
+    [first_name]                VARCHAR (100) NOT NULL,
+    [last_name]                 VARCHAR (100) NOT NULL,
+    [email]                     VARCHAR (200) NOT NULL,
+    [password]                  VARCHAR (200) NOT NULL,
+    [gender]                    NCHAR (10)    NULL,
+    [date_of_birth]             VARCHAR (100) NULL,
+    [auth_token]                VARCHAR (200) NOT NULL,
+    [created_at]                DATETIME      NULL,
+    [updated_at]                DATETIME      NULL,
+    [imob_customer_id]          INT           DEFAULT ((0)) NOT NULL,
+    [status]                    VARCHAR (10)  DEFAULT ('enable') NOT NULL,
+    [group_id]                  VARCHAR (10)  DEFAULT ((100)) NOT NULL,
+    [phone_no]                  VARCHAR (10)  NULL,
+    [confiscated_wink_status]   VARCHAR (10)  DEFAULT ((0)) NOT NULL,
+    [subscribe_status]          VARCHAR (10)  DEFAULT ((0)) NOT NULL,
+    [confiscated_points_status] VARCHAR (255) DEFAULT ((0)) NULL,
+    [sign_in_status]            INT           DEFAULT ((0)) NOT NULL,
+    PRIMARY KEY CLUSTERED ([customer_id] ASC),
+    UNIQUE NONCLUSTERED ([auth_token] ASC),
+    UNIQUE NONCLUSTERED ([auth_token] ASC),
+    UNIQUE NONCLUSTERED ([email] ASC),
+    UNIQUE NONCLUSTERED ([email] ASC)
+);
+

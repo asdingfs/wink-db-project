@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[campaign_log] (
+    [Id]                   INT           NOT NULL,
+    [action_id]            INT           NOT NULL,
+    [campaign_id]          INT           NULL,
+    [merchant_id]          INT           NULL,
+    [campaign_name]        NVARCHAR (50) NULL,
+    [campaign_code]        NVARCHAR (50) NULL,
+    [campaign_amount]      DECIMAL (18)  NULL,
+    [sales_code]           NVARCHAR (50) NULL,
+    [sales_commission]     NVARCHAR (50) NULL,
+    [total_winks]          DECIMAL (18)  NULL,
+    [total_winks_amount]   DECIMAL (18)  NULL,
+    [agency]               BIT           NULL,
+    [created_at]           DATETIME      NULL,
+    [updated_at]           DATETIME      NULL,
+    [cents_per_wink]       DECIMAL (18)  NULL,
+    [percent_for_wink]     DECIMAL (18)  NULL,
+    [campaign_start_date]  DATETIME      NULL,
+    [campaign_end_date]    DATETIME      NULL,
+    [agency_name]          NVARCHAR (50) NULL,
+    [wink_purchase_only]   INT           NULL,
+    [wink_purchase_status] NVARCHAR (50) NULL,
+    [campaign_status]      VARCHAR (30)  NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

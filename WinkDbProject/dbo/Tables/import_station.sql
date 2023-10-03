@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[import_station] (
+    [STATION_ID]      INT            NOT NULL,
+    [STATION_CODE]    NVARCHAR (255) NULL,
+    [STATION_DESC]    NVARCHAR (255) NULL,
+    [STATION_COMPANY] NVARCHAR (255) NULL
+);
+

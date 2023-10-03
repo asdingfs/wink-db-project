@@ -1,0 +1,7 @@
+﻿CREATE PROCEDURE [dbo].[GET_CURRENT_SINGAPORT_DATETIME]
+	(@CURRENT_DATE DATETIME OUT)
+AS
+BEGIN
+	DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '+08:00');
+	SET @CURRENT_DATE = @dt
+END

@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[Table_1] (
+    [customer_id]               INT           NOT NULL,
+    [first_name]                VARCHAR (100) NOT NULL,
+    [last_name]                 VARCHAR (100) NOT NULL,
+    [email]                     VARCHAR (200) NOT NULL,
+    [password]                  VARCHAR (200) NOT NULL,
+    [gender]                    NCHAR (10)    NULL,
+    [date_of_birth]             VARCHAR (100) NULL,
+    [auth_token]                VARCHAR (200) NOT NULL,
+    [created_at]                DATETIME      NULL,
+    [updated_at]                DATETIME      NULL,
+    [imob_customer_id]          INT           CONSTRAINT [DF_Table_1_imob_customer_id] DEFAULT ((0)) NOT NULL,
+    [status]                    VARCHAR (10)  CONSTRAINT [DF_Table_1_status] DEFAULT ('enable') NOT NULL,
+    [group_id]                  VARCHAR (10)  CONSTRAINT [DF_Table_1_group_id] DEFAULT ((1)) NOT NULL,
+    [phone_no]                  VARCHAR (16)  NULL,
+    [confiscated_wink_status]   VARCHAR (10)  CONSTRAINT [DF_Table_1_confiscated_wink_status] DEFAULT ((0)) NOT NULL,
+    [subscribe_status]          VARCHAR (10)  CONSTRAINT [DF_Table_1_subscribe_status] DEFAULT ((0)) NOT NULL,
+    [confiscated_points_status] VARCHAR (255) CONSTRAINT [DF_Table_1_confiscated_points_status] DEFAULT ((0)) NULL,
+    [sign_in_status]            INT           CONSTRAINT [DF_Table_1_sign_in_status] DEFAULT ((0)) NOT NULL,
+    [customer_password]         VARCHAR (50)  NULL,
+    [avatar_id]                 INT           CONSTRAINT [DF_Table_1_avatar_id] DEFAULT ((1)) NOT NULL,
+    [avatar_image]              VARCHAR (200) CONSTRAINT [DF_Table_1_avatar_image] DEFAULT (N'profile3.png') NOT NULL,
+    [ip_scanned]                VARCHAR (50)  NULL,
+    [ip_address]                VARCHAR (50)  NULL,
+    [skin_name]                 VARCHAR (50)  CONSTRAINT [DF_Table_1_skin_name] DEFAULT ('pink') NOT NULL
+);
+

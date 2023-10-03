@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[winktag_campaign] (
+    [campaign_id]             INT           IDENTITY (1, 1) NOT NULL,
+    [campaign_name]           VARCHAR (250) NULL,
+    [campaign_image_large]    VARCHAR (250) NULL,
+    [campaign_image_small]    VARCHAR (250) NULL,
+    [points]                  INT           NULL,
+    [interval_status]         INT           NULL,
+    [interval]                INT           DEFAULT ((0)) NULL,
+    [limit]                   INT           DEFAULT ((0)) NULL,
+    [winktag_type]            VARCHAR (50)  NULL,
+    [winktag_status]          VARCHAR (10)  DEFAULT ((1)) NOT NULL,
+    [created_at]              DATETIME      NULL,
+    [updated_at]              DATETIME      NULL,
+    [from_date]               DATETIME      NULL,
+    [to_date]                 DATETIME      NULL,
+    [interval_type]           VARCHAR (50)  NULL,
+    [content]                 VARCHAR (255) NULL,
+    [survey_type]             VARCHAR (255) NULL,
+    [position]                INT           DEFAULT (NULL) NULL,
+    [winktag_report]          VARCHAR (50)  NULL,
+    [size]                    INT           DEFAULT ((0)) NULL,
+    [min_count]               INT           DEFAULT ((0)) NULL,
+    [max_count]               INT           DEFAULT ((0)) NULL,
+    [sp_type]                 BIT           DEFAULT ((0)) NULL,
+    [internal_testing_status] INT           DEFAULT ((0)) NOT NULL
+);
+
